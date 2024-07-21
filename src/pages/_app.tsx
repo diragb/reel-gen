@@ -1,6 +1,17 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+// Typescript:
+import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+// Styles:
+import '@/styles/globals.css'
+import { Toaster } from '@/components/ui/toaster'
+
+// Functions:
+const App = ({ Component, pageProps }: AppProps) => (
+  <main>
+    <Component {...pageProps} />
+    <Toaster />
+  </main>
+)
+
+// Exports:
+export default App

@@ -1,13 +1,24 @@
-import { Html, Head, Main, NextScript } from "next/document";
+// Components:
+import StyledComponentsRegistry from '@/lib/registry'
+import {
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document'
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
+// Functions:
+const Document = () => (
+  <Html lang='en'>
+    <Head />
+    <body>
+      <StyledComponentsRegistry>
         <Main />
         <NextScript />
-      </body>
-    </Html>
-  );
-}
+      </StyledComponentsRegistry>
+    </body>
+  </Html>
+)
+
+// Exports:
+export default Document
